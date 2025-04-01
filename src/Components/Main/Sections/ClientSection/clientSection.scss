@@ -1,0 +1,139 @@
+.client {
+  background-color: #5a98d0;
+  border-radius: 200px 0 0 0;
+  padding-top: 96px;
+  padding-bottom: 125px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 111px;
+  }
+
+  &__text {
+    display: flex;
+    gap: 97px;
+    align-items: start;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 46px;
+    color: #fff;
+  }
+
+  &__description {
+    max-width: 540px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    opacity: 0.6;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 46px;
+    color: #f2f2f2;
+
+    &:not(:nth-child(4n)) {
+      border-right: 1px solid #fff;
+    }
+
+    &:not(:nth-last-child(-n + 4)) {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.more__clients {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #fff;
+  background-color: rgba(31, 63, 104, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .client {
+    padding-bottom: 55px;
+  }
+  .client__info {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .client__text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    gap: 45px;
+    text-align: center;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client__logo:not(:nth-child(2n)) {
+    border-right: 1px solid #fff;
+  }
+
+  .client__logo:nth-child(2n) {
+    border-right: none;
+  }
+
+  .client__logo:not(:nth-last-child(-n + 2)) {
+    border-bottom: 1px solid #fff;
+  }
+
+  .client__info {
+    gap: 55px;
+  }
+
+  .client__text {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 490px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client__logo:not(:nth-child(2n)) {
+    border-right: none;
+  }
+
+  .client__logo:nth-child(2n) {
+    border-right: none;
+  }
+
+  .client__logo:not(:nth-last-child(-n + 2)) {
+    border-bottom: 1px solid #fff;
+  }
+}

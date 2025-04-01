@@ -1,0 +1,58 @@
+.footer__about {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding-top: 96px;
+
+  &__right {
+    display: flex;
+    gap: 77px;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 299px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+
+  li {
+    display: flex;
+    gap: 16px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+
+    a {
+      transition: color 0.3s ease-in-out;
+    }
+    a:hover {
+      color: aqua;
+    }
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #fff;
+  gap: 15px;
+}
+
+.footer__copyright {
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  padding: 64px 0;
+  opacity: 0.4;
+}
